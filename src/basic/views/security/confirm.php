@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $success integer */
 /* @var $message string */
-
+$this->title = Yii::t('user', 'Confirmation');
 ?>
 <div class="alert alert-<?=$success?'success':'danger'?>" role="alert">
 	<?php if($success):?>
