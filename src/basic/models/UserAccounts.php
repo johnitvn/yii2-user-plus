@@ -39,6 +39,16 @@ class UserAccounts extends BaseUserAccounts implements UserConfirmableInterface,
     /**
      * @var User Accounts Event
      */
+    const BEFORE_RECONFIRM = 'beforeReconfirm';
+
+    /**
+     * @var User Accounts Event
+     */
+    const AFTER_RECONFIRM = 'afterReconfirm';
+
+    /**
+     * @var User Accounts Event
+     */
     const BEFORE_RECOVERY = 'beforeRecovery';
 
     /**
@@ -165,7 +175,7 @@ class UserAccounts extends BaseUserAccounts implements UserConfirmableInterface,
      */
     public function confirm() {
         $this->trigger(self::BEFORE_CONFIRM);
-        $this->scenario = 'confirm';        
+        $this->scenario = 'confirm';
         $this->confirm_token = null;
         $this->confirmed_at = time();
         if (!$this->save()) {
@@ -215,9 +225,30 @@ class UserAccounts extends BaseUserAccounts implements UserConfirmableInterface,
         return true;
     }
 
-    public function afterResetPassword(){
+    /**
+     * 
+     */
+    public function afterResetPassword() {
         $this->mailer->sendResetPasswordMessage($this, ['password' => $this->password]);
     }
+
+    /**
+     * 
+     * @return boolean
+     */
+    public function resendConfirmation() {
+        $this->trigger(self::BEFORE_RECONFIRM);
+        $token = $this->generateConfirmToken();
+        $route = $this->userPlusModule->confirmationHandlerRoute;
+        $url = Url::to([$route, 'token' => $token], true);
+        if (!$this->save()) {
+            return false;
+        }
+        $this->mailer->sendReconfirmationMessage($this, ['url' => $url]);
+        $this->trigger(self::AFTER_RECONFIRM);
+        return true;
+    }
+
     /**
      * 
      * @return string

@@ -18,6 +18,7 @@ class SecurityController extends BaseController {
         $actions['confirm']='johnitvn\userplus\basic\actions\ConfirmAction';      
         $actions['recovery']='johnitvn\userplus\basic\actions\RecoveryPasswordAction';      
         $actions['reset']='johnitvn\userplus\basic\actions\ResetPasswordAction';      
+        $actions['resend']='johnitvn\userplus\basic\actions\ResendConfirmAction';      
         return $actions;
     }
     

@@ -71,6 +71,7 @@ class Module extends BaseModule{
         $parentMap['RegisterForm']      = 'johnitvn\userplus\basic\models\RegisterForm';
         $parentMap['UserAccounts']      = 'johnitvn\userplus\basic\models\UserAccounts';
         $parentMap['RecoveryForm']      = 'johnitvn\userplus\basic\models\RecoveryForm';
+        $parentMap['ResendForm']      = 'johnitvn\userplus\basic\models\ResendForm';
         return $parentMap;
     }
     

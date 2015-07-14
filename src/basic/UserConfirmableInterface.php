@@ -10,6 +10,8 @@ interface UserConfirmableInterface extends EmailableInterface{
     
     public function isConfirmed();
     
+    public function resendConfirmation();
+    
     public function confirm();
     
     public function generateConfirmToken();
