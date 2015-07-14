@@ -5,9 +5,14 @@
     "authors": [
         {
             "name": "John Martin",
-            "email": "john.itvn@gmail.com"
+            "email": "john.itvn@gmail.com",
+            "homepage": "https://github.com/johnitvn?tab=repositories"
         }
     ],
+    "support": {
+        "issues": "https://github.com/johnitvn/yii2-user-plus/issues?state=open",
+        "source": "https://github.com/johnitvn/yii2-user-plus"
+    },
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": ">=2.0.4",
