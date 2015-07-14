@@ -1,0 +1,29 @@
+{
+    "name": "johnitvn/yii2-user-plus",
+    "type": "yii2-extension",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "John Martin",
+            "email": "john.itvn@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": ">=2.0.4",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "~2.0",
+        "yiisoft/yii2-authclient": "~2.0",
+        "yiisoft/yii2-bootstrap": "~2.0",
+        "yiisoft/yii2-jui": "*",
+        "johnitvn/yii2-ajaxcrud": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "johnitvn\\userplus\\": "src/"
+        }
+    },
+    "extra": {
+        "bootstrap": "johnitvn\\userplus\\Bootstrap"
+    }
+}
