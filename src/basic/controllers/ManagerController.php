@@ -7,6 +7,8 @@ use johnitvn\userplus\simple\controllers\ManagerController as BaseController;
 
 /**
  * ManagerController implements the CRUD actions for User model.
+ * @author John Martin <john.itvn@gmail.com>
+ * @since 1.0.0
  */
 class ManagerController extends BaseController {
 
