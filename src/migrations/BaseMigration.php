@@ -5,6 +5,7 @@ use Yii;
 
 /**
  * @author John Martin <john.itvn@gmail.com>
+ * @since 1.0.0
  */
 class BaseMigration extends \yii\db\Migration
 {
