@@ -1,5 +1,6 @@
 {
     "name": "johnitvn/yii2-user-plus",
+    "description":"High flexible user management extension for yii2",
     "type": "yii2-extension",
     "license": "Apache-2.0",
     "authors": [

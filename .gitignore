@@ -1,28 +1,24 @@
-# phpstorm project files
-.idea
-
-# netbeans project files
-nbproject
-
-# zend studio for eclipse project files
-.buildpath
-.project
-.settings
-
-# windows thumbnail cache
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
 
-# composer vendor dir
-/vendor
+# Folder config file
+Desktop.ini
 
-# composer itself is not needed
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+nbproject
+vendor
+composer
+composer.lock
 composer.phar
 
-# Mac DS_Store Files
-.DS_Store
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
-# phpunit itself is not needed
-phpunit.phar
-# local phpunit config
-/phpunit.xml
-
+# Windows shortcuts
+*.lnk
