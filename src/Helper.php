@@ -56,5 +56,15 @@ class Helper {
             return \Yii::$app->security->generateRandomString($lenght);
         }
     }
+    
+    /**
+     * 
+     * @param mixed $object
+     * @return string the name space of object
+     */
+    public static function getNamespace($object){
+        $class = new \ReflectionClass($object::className());
+        return $class->getNamespaceName();
+    }
 
 }

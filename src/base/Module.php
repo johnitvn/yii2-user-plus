@@ -4,7 +4,6 @@ namespace johnitvn\userplus\base;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use johnitvn\userplus\Helper;
 use yii\base\Module as YiiModule;
 
 /**
@@ -45,22 +44,7 @@ abstract class Module extends YiiModule {
     public function init() {
         // Initial model map
         $this->modelMap = ArrayHelper::merge($this->getDefaultModelMap(), $this->modelMap);
-
-        // Initial controller namespace for web app and console app
-        if (Helper::isConsoleApplication()) {
-            $this->controllerNamespace = $this->getConsoleControllerNamespace();
-            foreach ($this->getControllerMap() as $key => $value) {
-                Yii::$app->controllerMap[$key] = [
-                    'class' => $this->getConsoleControllerNamespace() . '\\' . $value,
-                ];
-            }
-        } else {
-            $this->controllerNamespace = $this->getWebControllerNamespace();           
-        }
-    }
-
-    protected function getControllerMap() {
-        return ['user' => 'CommandController'];
+        $this->controllerNamespace = $this->getWebControllerNamespace();
     }
 
     public function createControllerByID($id) {
@@ -70,6 +54,8 @@ abstract class Module extends YiiModule {
             return parent::createControllerByID($id);
         }
     }
+    
+    
 
     public function beforeAction($action) {
         $aId = $action->id;
@@ -78,6 +64,10 @@ abstract class Module extends YiiModule {
         } else {
             return parent::beforeAction($action);
         }
+    }
+    
+    public function getCommandControllerMap(){
+       return [];
     }
 
     /**
