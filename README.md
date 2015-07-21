@@ -8,7 +8,14 @@
 
 Yii2-user-plus is high flexible user management extension for yii2.
 
-User story:
+Most of web applications need user management feature. Notwithstanding it simple or advance application. 
+
+Some applications need need register and login function. Some applications just need login feature login.
+Or some applications else need reset forgotten passwords feature. 
+
+Rather than re-implementing this on each application, you can use which is a high flexible user management module for Yii2 that handles common tasks such as authentication, registration, confirmation and password retrieval and more.
+
+Special not only you can choose business model match your user management requirement. But also you just need override what you want to change. You can override one of views, one of controller, even one of action of controller which don't need to change anything else.  <b>User Plus</b> can easy extend, too.
 
 
 ##Document
