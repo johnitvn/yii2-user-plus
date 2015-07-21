@@ -4,7 +4,7 @@ namespace johnitvn\userplus\simple\commands;
 use yii\console\Controller;
 
 /**
- * Controller for alls module commands
+ * User manager commands
  *
  * @author John Martin <john.itvn@gmail.com>
  * @since 1.0.0
