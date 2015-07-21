@@ -1,12 +1,12 @@
 #Yii2-user-plus 
-=============
+
 [![Latest Stable Version](https://poser.pugx.org/johnitvn/yii2-user-plus/v/stable)](https://packagist.org/packages/johnitvn/yii2-user-plus)
 [![License](https://poser.pugx.org/johnitvn/yii2-user-plus/license)](https://packagist.org/packages/johnitvn/yii2-user-plus)
 [![Total Downloads](https://poser.pugx.org/johnitvn/yii2-user-plus/downloads)](https://packagist.org/packages/johnitvn/yii2-user-plus)
 [![Monthly Downloads](https://poser.pugx.org/johnitvn/yii2-user-plus/d/monthly)](https://packagist.org/packages/johnitvn/yii2-user-plus)
 [![Daily Downloads](https://poser.pugx.org/johnitvn/yii2-user-plus/d/daily)](https://packagist.org/packages/johnitvn/yii2-user-plus)
 
-Yii2-user-plus is high flexible user management extension for yii2.
+<b>User Plus</b> is high flexible user management extension for yii2.
 
 Most of web applications need user management feature. Notwithstanding it simple or advance application. 
 
