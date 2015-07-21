@@ -1,4 +1,5 @@
 <?php
+
 namespace johnitvn\userplus\base;
 
 use Yii;
@@ -30,52 +31,75 @@ abstract class Module extends YiiModule {
      * Use for extends module.
      */
     public $modelMap = [];
-    
+
+    /**
+     *
+     * @var boolean Enable/Disable security controller
+     */
+    public $enableSecurityHandler = true;
+
     /**
      * Initial module
      * @return void
      */
-    public function init(){
+    public function init() {
         // Initial model map
-        $this->modelMap = ArrayHelper::merge($this->getDefaultModelMap(), $this->modelMap);               
-        
+        $this->modelMap = ArrayHelper::merge($this->getDefaultModelMap(), $this->modelMap);
+
         // Initial controller namespace for web app and console app
-        if(Helper::isConsoleApplication()){
+        if (Helper::isConsoleApplication()) {
             $this->controllerNamespace = $this->getConsoleControllerNamespace();
-        }else{
-            $this->controllerNamespace = $this->getWebControllerNamespace();
-        }       
+            foreach ($this->getControllerMap() as $key => $value) {
+                Yii::$app->controllerMap[$key] = [
+                    'class' => $this->getConsoleControllerNamespace() . '\\' . $value,
+                ];
+            }
+        } else {
+            $this->controllerNamespace = $this->getWebControllerNamespace();           
+        }
     }
-    
+
+    protected function getControllerMap() {
+        return ['user' => 'CommandController'];
+    }
+
+    public function createControllerByID($id) {
+        if ($id == 'security' && !$this->enableSecurityHandler) {
+            return null;
+        } else {
+            return parent::createControllerByID($id);
+        }
+    }
+
     public function beforeAction($action) {
         $aId = $action->id;
         if ($aId == "register" && !$this->enableRegister) {
             throw new \yii\web\NotFoundHttpException("Page not found");
-        }  else {
+        } else {
             return parent::beforeAction($action);
         }
     }
-    
-     /**
+
+    /**
      * Return default model map for modules.
      * When user not config model for map so we will get model class
      * from this default model map
      * @return array Default model map
      */
     abstract protected function getDefaultModelMap();
-    
+
     /**
      * Return web controller namespace.
      * @return string The web app controller namespace
      */
     abstract protected function getWebControllerNamespace();
-    
+
     /**
      * Return console controller namespace.    
      * @return array The console app controller namespace
      */
     abstract protected function getConsoleControllerNamespace();
-    
+
     /**
      * Get model class from model map.
      *
@@ -87,7 +111,7 @@ abstract class Module extends YiiModule {
     public function getModelClassName($name) {
         return $this->modelMap[$name];
     }
-    
+
     /**
      * Create instance of model with name of model and config.
      * This function will get class of model from Module::getModelClass()
@@ -95,9 +119,9 @@ abstract class Module extends YiiModule {
      * @param type $name
      * @param array $config
      */
-    public function createModelInstance($name,array $config = []){
-         $config['class'] = $this->getModelClassName($name);
-         return Yii::createObject($config);
+    public function createModelInstance($name, array $config = []) {
+        $config['class'] = $this->getModelClassName($name);
+        return Yii::createObject($config);
     }
-   
+
 }

@@ -23,7 +23,6 @@ use johnitvn\userplus\base\Module as BaseModule;
  */
 class Module extends BaseModule {
 
-    
     /**
      * @var array modelMap Model mapping. 
      * Need for customize model.
@@ -44,12 +43,6 @@ class Module extends BaseModule {
      * Default is username
      */
     public $loginType = "username";
-    
-    /**
-     *
-     * @var boolean Enable/Disable security controller
-     */
-    public $enableSecurityHandler = true;
 
     /**
      * Initial module
@@ -61,14 +54,6 @@ class Module extends BaseModule {
             throw new yii\base\InvalidConfigException('loginType just accept "username"/"email".');
         }
     }
-    
-    public function createControllerByID($id) {
-        if ($id == 'security' && !$this->enableSecurityHandler) {
-            return null;
-        } else {
-            return parent::createControllerByID($id);
-        }
-    }
 
     /**
      * Return default model map for modules.
@@ -78,11 +63,11 @@ class Module extends BaseModule {
      */
     protected function getDefaultModelMap() {
         return [
-            'UserSearch'            =>  'johnitvn\userplus\simple\models\UserSearch',
-            'UserAccounts'          =>  'johnitvn\userplus\simple\models\UserAccounts',
-            'LoginForm'             =>  'johnitvn\userplus\simple\models\LoginForm',
-            'RegisterForm'          =>  'johnitvn\userplus\simple\models\RegisterForm',
-            'ChangePasswordForm'    =>  'johnitvn\userplus\simple\models\ChangePasswordForm',
+            'UserSearch' => 'johnitvn\userplus\simple\models\UserSearch',
+            'UserAccounts' => 'johnitvn\userplus\simple\models\UserAccounts',
+            'LoginForm' => 'johnitvn\userplus\simple\models\LoginForm',
+            'RegisterForm' => 'johnitvn\userplus\simple\models\RegisterForm',
+            'ChangePasswordForm' => 'johnitvn\userplus\simple\models\ChangePasswordForm',
         ];
     }
 
