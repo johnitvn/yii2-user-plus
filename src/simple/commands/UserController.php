@@ -1,7 +1,8 @@
 <?php
+
 namespace johnitvn\userplus\simple\commands;
 
-use yii\console\Controller;
+use johnitvn\userplus\base\ConsoleController;
 
 /**
  * User manager commands
@@ -9,15 +10,15 @@ use yii\console\Controller;
  * @author John Martin <john.itvn@gmail.com>
  * @since 1.0.0
  */
-class UserController extends Controller{
-    
+class UserController extends ConsoleController {
+
     /**
      * @inheritdoc
      */
     public function actions() {
         return [
-            'create-admin'=>'johnitvn\userplus\base\actions\CommandCreateAction',
+            'create-admin' => 'johnitvn\userplus\simple\actions\CommandCreateAction',
         ];
     }
-    
+
 }

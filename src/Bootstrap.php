@@ -38,6 +38,7 @@ class Bootstrap implements BootstrapInterface {
             foreach ($module->getCommandControllerMap() as $key => $value) {
                 Yii::$app->controllerMap[$key] = [
                     'class' => $value,
+                    'userPlusModule' => $module,
                 ];
             }
 

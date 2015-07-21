@@ -1,17 +1,17 @@
 <?php
 
-namespace johnitvn\userplus\base\actions;
+namespace johnitvn\userplus\simple\actions;
 
 use Yii;
 use yii\helpers\Console;
-use johnitvn\userplus\base\Action;
+use johnitvn\userplus\base\Command;
 
 /**
  * Command create action will be handler create administrator command from yii console applcation.
  * @author John Martin <john.itvn@gmail.com>
  * @since 1.0.0
  */
-class CommandCreateAction extends Action {
+class CommandCreateAction extends Command {
 
     /**
      * Create new administrator account.
