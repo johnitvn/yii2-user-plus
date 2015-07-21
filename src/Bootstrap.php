@@ -34,16 +34,14 @@ class Bootstrap implements BootstrapInterface {
 
         if (Yii::$app->hasModule('user') && Helper::isConsoleApplication()) {
             $module = Yii::$app->getModule('user');
-
+            // Mapping command controller
             foreach ($module->getCommandControllerMap() as $key => $value) {
                 Yii::$app->controllerMap[$key] = [
                     'class' => $value,
-                    'userPlusModule' => $module,
                 ];
             }
-
-            // unset module
-            Yii::$app->setModule('user', null);
+            // Don't catch all controller with its namespace
+            $module->controllerNamespace = 'johnitvn\userplus\fake';
         }
     }
 

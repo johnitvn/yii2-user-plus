@@ -2,10 +2,11 @@
 
 namespace johnitvn\userplus\base;
 
+use Yii;
 use yii\base\Action as YiiAction;
 
 /**
- * Base class for all action classes in <b>User Plus</b> extension.
+ * Base class for all command action classes in <b>User Plus</b> extension.
  * 
  * @author John Martin <john.itvn@gmail.com>
  * @since 1.0.0
@@ -18,9 +19,12 @@ class Command extends YiiAction {
      */
     protected $userPlusModule;
 
+    /**
+     * Initial of action
+     */
     public function init() {
-        parent::init();
-        $this->userPlusModule = $this->controller->userPlusModule;
+        // get instance of user module
+        $this->userPlusModule = Yii::$app->getModule('user');
     }
 
 }

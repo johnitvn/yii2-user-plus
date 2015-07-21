@@ -2,21 +2,29 @@
 
 namespace johnitvn\userplus\base;
 
+use Yii;
 use yii\console\Controller;
 
 /**
- * Description of ConsoleController
+ * ConsoleController is the base class for all console controller classes in <b>User Plus</b> extension.
  *
  * @author John Martin <john.itvn@gmail.com>
  * @since 1.0.0
  * 
  */
 class ConsoleController extends Controller {
-    
+
     /**
-     *
-     * @var Module the curent user plus module instance
+     * @var Module The curent user plus module(Subclass of johnitvn\userplus\base\Module)
      */
-    public $userPlusModule;
+    protected $userPlusModule;
+
+    /**
+     * Initial of action
+     */
+    public function init() {
+        // get instance of user module
+        $this->userPlusModule = Yii::$app->getModule('user');
+    }
 
 }

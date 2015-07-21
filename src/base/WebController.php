@@ -5,7 +5,7 @@ use Yii;
 use yii\web\Controller;
 
 /**
- * WebController is the base class for all controller classes in <b>User Plus</b> extension.
+ * WebController is the base class for all web controller classes in <b>User Plus</b> extension.
  *
  * @author John Martin <john.itvn@gmail.com>
  * @since 1.0.0
