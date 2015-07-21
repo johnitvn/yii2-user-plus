@@ -40,18 +40,18 @@ Per module contain one concept for handler user management workflow.
 You must understanding concept of three module.
 
 ######1. Simple Module:
-   As name of module, it useful for simple business. 
-   The feature of this module is:
-+ User login handler(You can choose login is username/email)
-+ User register handler(You can enable/disable user register)
-+ User logout handler
-+ CRUD operations for user management
-+ Create administrator( Just accept create administrator from command)
++ As name of module, it useful for simple business. 
+The feature of this module is:
+    + User login handler(You can choose login is username/email)
+    + User register handler(You can enable/disable user register)
+    + User logout handler
+    + CRUD operations for user management
+    + Create administrator( Just accept create administrator from command)
 
-    When do you should use simple module
-+ You have simple business with user flow
-+ You don't need register confirmation function 
-+ Example: You have backend application for manager products. So you just need login feature and don't need user register.
++ When do you should use simple module
+    + You have simple business with user flow
+    + You don't need register confirmation function 
+    + Example: You have backend application for manager products. So you just need login feature and don't need user register.
 So simple module is best choice for you
 
 ######2. Basic Module:
