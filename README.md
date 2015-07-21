@@ -64,10 +64,10 @@ So simple module is best choice for you
 + Because user confirmation and recovery password need send email to user. So this module required user register with username, email and password. You sill can choose login with email/username like simple module
 
 ###### When do you should use simple module?
-(Updating)
+&nbsp;&nbsp;&nbsp;&nbsp;(Updating)
 
 #####3. Advance Module:
-  Advance Module requirement is developing. It's will coming soon.
+&nbsp;&nbsp;&nbsp;&nbsp;(Developing)
 
 
 
