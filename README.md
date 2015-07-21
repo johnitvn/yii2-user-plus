@@ -33,13 +33,13 @@ or add
 to the require section of your `composer.json` file.
 
 
-Usage
+Modules business concept
 -----
 User Plus provider 3 modules(simple,basic and advanced).
 Per module contain one concept for handler user management workflow. 
 You must understanding concept of three module.
 
-#####1. Simple Module:
+######1. Simple Module:
    As name of module, it useful for simple business. 
    The feature of this module is:
 + User login handler(You can choose login is username/email)
@@ -65,6 +65,76 @@ So simple module is best choice for you
 
 ######3. Advance Module:
   Advance Module requirement is developing. It's will coming soon.
+
+
+
+Installation
+-----
+After you choose module business you want. Now, go to configuration.
+
+1. The first add to web config following below:
+````
+'modules'=>[
+    'user'=>[
+        'class'=>'johnitvn\userplus\{{ModuleName}}\Module',
+        // You can add other config after
+    ]
+],
+'components'=>[
+    'user' => [
+        'identityClass' => 'johnitvn\userplus\{{ModuleName}}\models\UserAccount',
+    ],
+]
+````
+Let replace <b>{{ModuleName}}</b> to simple or basic or advanced 
+
+2. Next, add to console config following bellow:
+````
+'modules'=>[
+    'user'=>'johnitvn\userplus\{{ModuleName}}\Module',
+],
+'components'=>[
+    'user' => [
+        'class'=>'yii\web\User',
+        'identityClass' => 'johnitvn\userplus\{{ModuleName}}\models\UserAccount',
+        'loginUrl'=>'/user/security/login'
+    ],
+]
+````
+
+3. The last thing is run the migrate command
+````
+$ yii migrate/up -migrationPath=@userplus/migrations
+````
+
+Usage
+-----
+
+1. Console commands:
+You only can manager user when your account is administrator.
+So you must create administrator via command user/create-admin in the fist.
+And after that you can login and manager user. You also can set administrator to other user when your account is administrator.
+````
+- user                         User manager commands
+    user/create-admin          Create new administrator account.
+````
+
+Now let run console command. And enter your account information. 
+```
+$ yii user/create-admin
+```
+The information of account depending on the module you choose. 
+Example for simple module you need username/email and password.
+The default login field is username. You can see [Configuration] for more information
+
+2. After create administrator you can login to application
+The listing of available route is:
++ /user/security/login
++ /user/security/logout
++ /user/security/register
++ /user/manager
+Some route i'm not listing here because you no need do anything with its.
+
 
 
 ##Development roadmap
