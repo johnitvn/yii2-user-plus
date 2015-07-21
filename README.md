@@ -39,7 +39,7 @@ User Plus provider 3 modules(simple,basic and advanced).
 Per module contain one concept for handler user management workflow. 
 You must understanding concept of three module.
 
-###1. Simple Module:
+#####1. Simple Module:
 ###### As name of module, it useful for simple business. 
 The feature of this module is:
     + User login handler(You can choose login is username/email)
@@ -54,7 +54,7 @@ The feature of this module is:
     + Example: You have backend application for manager products. So you just need login feature and don't need user register.
 So simple module is best choice for you
 
-###2. Basic Module:
+#####2. Basic Module:
 ###### Basic module contain all features of simple module and following below
 + After user register, application will send an email to user. And user must go to confirm link in email to confirm their account.
 + You can disable/enable confirmation feature
@@ -66,7 +66,7 @@ So simple module is best choice for you
 ###### When do you should use simple module?
 (Updating)
 
-###3. Advance Module:
+#####3. Advance Module:
   Advance Module requirement is developing. It's will coming soon.
 
 
