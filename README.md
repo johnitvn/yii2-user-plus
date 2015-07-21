@@ -86,7 +86,7 @@ After you choose module business you want. Now, go to configuration.
     ],
 ]
 ````
-Let replace <b>{{ModuleName}}</b> to simple or basic or advanced 
+Let replace `{{ModuleName}}` to simple or basic or advanced 
 
 2. Next, add to console config following bellow:
 ````
