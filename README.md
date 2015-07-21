@@ -1,10 +1,10 @@
 #yii2-rbac-plus
 =============
-[![Latest Stable Version](https://poser.pugx.org/{package}/v/stable)](https://packagist.org/packages/{package})
-[![License](https://poser.pugx.org/{package}/license)](https://packagist.org/packages/{package})
-[![Total Downloads](https://poser.pugx.org/{package}/downloads)](https://packagist.org/packages/{package})
-[![Monthly Downloads](https://poser.pugx.org/{package}/d/monthly)](https://packagist.org/packages/{package})
-[![Daily Downloads](https://poser.pugx.org/{package}/d/daily)](https://packagist.org/packages/{package})
+[![Latest Stable Version](https://poser.pugx.org/johnitvn/yii2-user-plus/v/stable)](https://packagist.org/packages/johnitvn/yii2-user-plus)
+[![License](https://poser.pugx.org/johnitvn/yii2-user-plus/license)](https://packagist.org/packages/johnitvn/yii2-user-plus)
+[![Total Downloads](https://poser.pugx.org/johnitvn/yii2-user-plus/downloads)](https://packagist.org/packages/johnitvn/yii2-user-plus)
+[![Monthly Downloads](https://poser.pugx.org/johnitvn/yii2-user-plus/d/monthly)](https://packagist.org/packages/johnitvn/yii2-user-plus)
+[![Daily Downloads](https://poser.pugx.org/johnitvn/yii2-user-plus/d/daily)](https://packagist.org/packages/johnitvn/yii2-user-plus)
 
 High flexible user management extension for yii2
 
@@ -21,13 +21,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist {package} "*"
+php composer.phar require --prefer-dist johnitvn/yii2-user-plus "*"
 ```
 
 or add
 
 ```
-"{package}": "*"
+"johnitvn/yii2-user-plus": "*"
 ```
 
 to the require section of your `composer.json` file.
