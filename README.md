@@ -12,10 +12,10 @@ User story:
 
 
 ##Document
-[Modules Business Concept](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/BusinessConcept.md)|
-[Instalation](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Instalation.md)|
-[General Usage](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/General-Usage.md)|
-[Definitive Guide](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/README.md)
+[Modules Business Concept](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/BusinessConcept.md)<BR>
+[Instalation](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Instalation.md)<BR>
+[General Usage](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/General-Usage.md)<BR>
+[Definitive Guide](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/README.md)<BR>
 
 
 
