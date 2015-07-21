@@ -48,7 +48,7 @@ You must understanding concept of three module.
 + CRUD operations for user management
 + Create administrator( Just accept create administrator from command)
 
-<b>When do you should use simple module</b>
+    When do you should use simple module
 + You have simple business with user flow
 + You don't need register confirmation function 
 + Example: You have backend application for manager products. So you just need login feature and don't need user register.
