@@ -17,12 +17,11 @@
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": ">=2.0.4",
-        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-bootstrap": "~2.0",
         "yiisoft/yii2-swiftmailer": "~2.0",
         "yiisoft/yii2-authclient": "~2.0",
-        "yiisoft/yii2-bootstrap": "~2.0",
         "yiisoft/yii2-jui": "*",
-        "johnitvn/yii2-ajaxcrud": "*"
+        "johnitvn/yii2-ajaxcrud": "2.0.3"
     },
     "autoload": {
         "psr-4": {
