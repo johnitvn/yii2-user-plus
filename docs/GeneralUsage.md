@@ -1,7 +1,7 @@
 Usage
 -----
 
-1. Console commands:
+###Console commands:
 You only can manager user when your account is administrator.
 So you must create administrator via command user/create-admin in the fist.
 And after that you can login and manager user. You also can set administrator to other user when your account is administrator.
@@ -20,10 +20,10 @@ $ yii user/create-admin
 
 The information of account depending on the module you choose. 
 Example for simple module you need username/email and password.
-The default login field is username. You can see [Configuration] for more information
+The default login field is username. You can see [Configuration](https://github.com/johnitvn/yii2-user-plus/tree/master/docs#2-configuration) for more information
 
-2. After create administrator you can login to application<BR>
-The listing of available route is:<BR>
+### Listing of available route
+After create administrator you can login to application , the listing of available route is:<BR>
 
 + /user/security/login
 + /user/security/logout
