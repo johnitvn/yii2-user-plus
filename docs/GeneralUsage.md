@@ -22,8 +22,9 @@ The information of account depending on the module you choose.
 Example for simple module you need username/email and password.
 The default login field is username. You can see [Configuration] for more information
 
-2. After create administrator you can login to application
-The listing of available route is:
+2. After create administrator you can login to application<BR>
+The listing of available route is:<BR>
+
 + /user/security/login
 + /user/security/logout
 + /user/security/register
