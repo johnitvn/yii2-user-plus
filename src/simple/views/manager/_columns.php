@@ -4,7 +4,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\jui\DatePicker;
 
-return [
+$columns = [
     [
         'class' => 'kartik\grid\CheckboxColumn',
         'width' => '20px',
@@ -63,7 +63,8 @@ return [
                 ]);
             }
         },
-        'format' => 'raw'
+        'format' => 'raw',
+        'visible' => Yii::$app->user->identity->isAdministrator(),
     ],
     [
         'class' => '\kartik\grid\DataColumn',
@@ -91,22 +92,52 @@ return [
             }
         },
         'format' => 'raw',
+        'visible' => Yii::$app->user->identity->isAdministrator(),
         'filter' => [0 => 'Not Admin', 1 => 'Admin'],
-    ],
-    [
-        'class' => 'kartik\grid\ActionColumn',
-        'dropdown' => false,
-        'vAlign' => 'middle',
-        'urlCreator' => function($action, $model, $key, $index) {
-            return Url::to([$action, 'id' => $key]);
-        },
-            'viewOptions' => ['role' => 'modal-remote', 'title' => 'View', 'data-toggle' => 'tooltip'],
-            'updateOptions' => ['role' => 'modal-remote', 'title' => 'Update', 'data-toggle' => 'tooltip'],
-            'deleteOptions' => ['role' => 'modal-remote', 'title' => 'Delete',
-                'data-confirm' => false, 'data-method' => false, // for overide yii data api
-                'data-request-method' => 'post',
-                'data-toggle' => 'tooltip',
-                'data-confirm-title' => 'Are you sure?',
-                'data-confirm-message' => 'Are you sure want to delete this item'],
-        ],
-    ];
+    ]
+];
+        
+$rbacModule = Yii::$app->getModule('rbac');
+if ($rbacModule instanceof johnitvn\rbacplus\Module) {
+    /**
+     * Intergrate with Rbac Plus extension
+     */
+    $columns[] = [
+            'class' => 'kartik\grid\DataColumn',
+            'header' => Yii::t('rbac', 'Assignment'),   
+            'hAlign' => 'center',
+            'value'=>function($model){
+                return Html::a('<span class="glyphicon glyphicon-king"></span>',
+                                ['/rbac/assignment/assignment', 'id' => $model->id], 
+                                [
+                                    'role' => 'modal-remote',
+                                    'title' => Yii::t('user', 'Assignment'),
+                                ]
+                        );
+            },
+            'format' => 'raw',    
+            'visible' => Yii::$app->user->identity->isAdministrator(),        
+        ];
+    
+}
+        
+        
+$columns[] = [   
+    'class' => 'kartik\grid\ActionColumn',
+    'dropdown' => false,
+    'vAlign' => 'middle',
+    'hAlign' => 'center',
+    'urlCreator' => function($action, $model, $key, $index) {
+        return Url::to([$action, 'id' => $key]);
+    },
+    'viewOptions' => ['role' => 'modal-remote', 'title' => 'View', 'data-toggle' => 'tooltip'],
+    'updateOptions' => ['role' => 'modal-remote', 'title' => 'Update', 'data-toggle' => 'tooltip'],
+    'deleteOptions' => ['role' => 'modal-remote', 'title' => 'Delete',
+    'data-confirm' => false, 'data-method' => false, // for overide yii data api
+    'data-request-method' => 'post',
+    'data-toggle' => 'tooltip',
+    'data-confirm-title' => 'Are you sure?',
+    'data-confirm-message' => 'Are you sure want to delete this item'],
+];
+
+return $columns;

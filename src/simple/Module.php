@@ -54,10 +54,10 @@ class Module extends BaseModule {
             throw new yii\base\InvalidConfigException('loginType just accept "username"/"email".');
         }
     }
-    
+
     public function getCommandControllerMap() {
         return [
-            'user'=>$this->getConsoleControllerNamespace().'\\UserController',
+            'user' => $this->getConsoleControllerNamespace() . '\\UserController',
         ];
     }
 

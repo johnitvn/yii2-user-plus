@@ -36,6 +36,7 @@ abstract class Module extends YiiModule {
      * @var boolean Enable/Disable security controller
      */
     public $enableSecurityHandler = true;
+    private $rbac;
 
     /**
      * Initial module
@@ -54,8 +55,6 @@ abstract class Module extends YiiModule {
             return parent::createControllerByID($id);
         }
     }
-    
-    
 
     public function beforeAction($action) {
         $aId = $action->id;
@@ -65,9 +64,9 @@ abstract class Module extends YiiModule {
             return parent::beforeAction($action);
         }
     }
-    
-    public function getCommandControllerMap(){
-       return [];
+
+    public function getCommandControllerMap() {
+        return [];
     }
 
     /**
@@ -99,7 +98,7 @@ abstract class Module extends YiiModule {
      * @see Module::$modelMap
      */
     public function getModelClassName($name) {
-        return $this->modelMap[$name];
+        return $this->modelMap[$name];        
     }
 
     /**
