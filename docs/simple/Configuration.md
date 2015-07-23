@@ -9,7 +9,7 @@ List of simple module config variable avaiable:
   + You must set `rememberFor>0`  or `enableAutoLogin=true` in the user component config to enable remember user login feature.
 + <b>enableRegister(boolean)</b>:  Enable user register. <BR>
 Default user register is disable.
-+ <b>modelMap(array)</b>: Array of model mapping.
++ <b>modelMap(array)</b>: Array of model mapping.<BR>
 Default list of model map for simple module is
 ````php
   [
