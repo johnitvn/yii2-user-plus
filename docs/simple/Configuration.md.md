@@ -3,34 +3,11 @@ Configuration for simple module
 
 List of simple module config variable avaiable:
 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-+ <b>XXXXX(BBBBBB)</b>: 
-/**
-     * @var integer Time to remember user login.
-     * Default is 1 day
-     */
-    public $rememberFor = 3600 * 24;
++ <b>rememberFor(integer)</b>: Time to remember user login. <BR>
+Default time rememberFor is 3600*24(1 day). You can set 0 to disable remember user login feature. And you must set `'enableAutoLogin' => true` in the user component config to enable remember user login
++ <b>enableRegister(boolean)</b>:  Enable user register. <BR>
+Default user register is disable.
++ <b>modelMap(array)</b>: Array of model mapping.
++ <b>enableSecurityHandler(boolean)</b>: Enable/Disable security controller. 
+Default security handler is true. So you can access to routes `/user/security/*`
 
-    /**
-     * @var boolean enableRegister Enable user register.
-     * Default user register is disable
-     */
-    public $enableRegister = false;
-
-    /**
-     * @var array modelMap Model mapping. 
-     * Use for extends module.
-     */
-    public $modelMap = [];
-
-    /**
-     *
-     * @var boolean Enable/Disable security controller
-     */
-    public $enableSecurityHandler = true;
