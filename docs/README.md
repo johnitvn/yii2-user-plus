@@ -4,8 +4,8 @@
 Quick guide to getting started with <b>User Plus</b> Module
 
 1.1 [Modules Business Concept](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/BusinessConcept.md)<BR>
-1.2 [Instalation](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Instalation.md)<BR>
-1.3 [General Usage](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/General-Usage.md)<BR>
+1.2 [Instalation](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Installation.md)<BR>
+1.3 [General Usage](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/GeneralUsage.md)<BR>
 1.4 [Troubleshotting](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Troubleshotting.md)<BR>
 
 
