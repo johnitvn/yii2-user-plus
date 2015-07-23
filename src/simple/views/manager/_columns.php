@@ -98,7 +98,7 @@ $columns = [
 ];
         
 $rbacModule = Yii::$app->getModule('rbac');
-if ($rbacModule instanceof johnitvn\rbacplus\Module) {
+if (get_class($rbacModule) === 'johnitvn\rbacplus\Module') {
     /**
      * Intergrate with Rbac Plus extension
      */

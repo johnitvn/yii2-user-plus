@@ -46,8 +46,8 @@ class Bootstrap implements BootstrapInterface {
             }
 
             if (Yii::$app->hasModule('rbac')) {
-                $rbacModule = Yii::$app->getModule('rbac');
-                if ($rbacModule instanceof johnitvn\rbacplus\Module) {
+                $rbacModule = Yii::$app->getModule('rbac');             
+                if (get_class($rbacModule) === 'johnitvn\rbacplus\Module') {
                     $rbacModule->beforeCreateController = [$this, 'beforeRbacCreateController'];
                 }
             }
