@@ -34,5 +34,5 @@ Let replace `{{ModuleName}}` to simple or basic or advanced
 
 3. The last thing is run the migrate command
 ````
-$ yii migrate/up -migrationPath=@userplus/migrations
+$ yii migrate/up --migrationPath=@userplus/{{ModuleName}}/migrations
 ````
