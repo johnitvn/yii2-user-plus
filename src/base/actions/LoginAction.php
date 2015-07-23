@@ -35,7 +35,7 @@ class LoginAction extends Action{
         $this->performAjaxValidation($model);
         
         if ($model->load(Yii::$app->request->post()) && $model->login()) {            
-            return $this->controller->goBack();
+            return $this->controller->goHome();
         } else {
             $view = $this->view == null ? $this->id : $this->view;
             return $this->controller->render($view, [
