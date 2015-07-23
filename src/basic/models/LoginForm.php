@@ -16,8 +16,8 @@ class LoginForm extends BaseLoginForm {
         $rules = parent::rules();
         $rules['accountConfirmed'] = [
             'login',
-            function ($attribute) {                   
-                if (!$this->userPlusModule->enableUnconfirmedLogin&&!$this->user->isConfirmed()) {
+            function ($attribute) {                 
+                if ($this->user!==null&&!$this->userPlusModule->enableUnconfirmedLogin&&!$this->user->isConfirmed()) {
                     $this->addError($attribute, Yii::t('user', 'Your account is not confirmed'));
                 }                    
             }
