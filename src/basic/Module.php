@@ -27,8 +27,8 @@ use johnitvn\userplus\simple\Module as BaseModule;
  */
 class Module extends BaseModule {
 
-    public $enableUnconfirmedLogin = false;
-    public $enableConfirmation = true;
+    public $enableUnconfirmedLogin = true;
+    public $enableConfirmation = false;
     public $confirmWithin = 86400; // 24 hours
     public $confirmationHandlerRoute = '/user/security/confirm';
     public $enableRecoveryPassword = false;
