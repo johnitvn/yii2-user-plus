@@ -14,9 +14,9 @@ Or some applications else need reset forgotten passwords feature. Rather than re
 
 ##Document
 [Modules Business Concept](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/BusinessConcept.md)<BR>
-[Instalation](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Instalation.md)<BR>
-[General Usage](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/General-Usage.md)<BR>
-[Definitive Guide](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/README.md)<BR>
+[Instalation](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/Installation.md)<BR>
+[General Usage](https://github.com/johnitvn/yii2-user-plus/blob/master/docs/GeneralUsage.md)<BR>
+[Definitive Guide](https://github.com/johnitvn/yii2-user-plus/tree/master/docs)<BR>
 
 
 
