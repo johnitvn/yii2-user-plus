@@ -21,7 +21,7 @@ Or some applications else need reset forgotten passwords feature. Rather than re
 
 
 ##Development roadmap
-#### Version 1.0.0 (Schedule release at July 22, 2015)
+#### Version 1.0.0 (Released as beta version)
 Features of this version:
 + Manager user
 + Registration,Signin,Signout handler
